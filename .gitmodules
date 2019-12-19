@@ -1,0 +1,3 @@
+[submodule "Scripts/Vita-Nex/Core"]
+	path = Scripts/Vita-Nex/Core
+	url = https://github.com/ruaduck/Core.git
