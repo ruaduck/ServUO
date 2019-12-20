@@ -29,7 +29,7 @@ namespace Server.Engines.MyRunUO
         // Export character database every 30 minutes
         public static TimeSpan CharacterUpdateInterval = TimeSpan.FromMinutes(30.0);
         // Export online list database every 5 minutes
-        public static TimeSpan StatusUpdateInterval = TimeSpan.FromMinutes(1.0);
+        public static TimeSpan StatusUpdateInterval = TimeSpan.FromMinutes(5.0);
         public static string CompileConnectionString()
         {
             string connectionString = String.Format("DRIVER={0};SERVER={1};DATABASE={2};UID={3};PASSWORD={4};",
