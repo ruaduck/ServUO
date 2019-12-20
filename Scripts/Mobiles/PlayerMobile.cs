@@ -6872,6 +6872,8 @@ namespace Server.Mobiles
 
         #region Exploring the Deep
         private ExploringTheDeepQuestChain m_ExploringTheDeepQuest;
+        internal bool PublicMyRunUO;
+        internal bool ChangedMyRunUO;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public ExploringTheDeepQuestChain ExploringTheDeepQuest { get { return m_ExploringTheDeepQuest; } set { m_ExploringTheDeepQuest = value; } }
