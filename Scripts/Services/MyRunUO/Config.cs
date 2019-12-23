@@ -17,7 +17,7 @@ namespace Server.Engines.MyRunUO
         // Should the database use transactions? This is recommended
         public static bool UseTransactions = true;
         // Use optimized table loading techniques? (LOAD DATA INFILE)
-        public static bool LoadDataInFile = true;
+        public static bool LoadDataInFile = false;
         // This must be enabled if the database server is on a remote machine.
         public static bool DatabaseNonLocal = (DatabaseServer != "localhost");
         // Text encoding used
