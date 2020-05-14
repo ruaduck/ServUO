@@ -43,3 +43,6 @@
 !/Data/*
 !/bin/rosyln/*
 /Scripts/Vita-Nex/Core
+MyRunUOdb_layers.txt
+MyRunUOdb_mobiles.txt
+MyRunUOdb_skills.txt
