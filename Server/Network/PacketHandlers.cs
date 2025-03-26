@@ -48,9 +48,11 @@ namespace Server.Network
 		private static readonly EncodedPacketHandler[] m_EncodedHandlersLow;
 		private static readonly Dictionary<int, EncodedPacketHandler> m_EncodedHandlersHigh;
 
-		public static PacketHandler[] Handlers { get { return m_Handlers; } }
+        public static PacketHandler[] Handlers { get { return m_Handlers; } }
 
-		static PacketHandlers()
+        public static int LoginSeedLength => Handlers[0xEF]?.Length ?? -1;
+
+        static PacketHandlers()
 		{
 			m_Handlers = new PacketHandler[0x100];
 			m_6017Handlers = new PacketHandler[0x100];
@@ -1752,9 +1754,9 @@ namespace Server.Network
 
 			int range = pvSrc.ReadByte();
 
-			// Don't let range drop below the minimum standard.
 			range = Math.Max(Core.GlobalUpdateRange, range);
-			
+            range = Math.Min(Core.GlobalMaxUpdateRange, range);
+
             int old = state.UpdateRange;
 
 			if (old == range)
